@@ -1,0 +1,8 @@
+*.cmd
+*.o
+*.ko
+.tmp_versions/
+*.mod.c
+*.order
+*.symvers
+sector_read

@@ -1,0 +1,3 @@
+[submodule "modules/sstf/sstf-iosched-skeleton"]
+	path = modules/sstf/sstf-iosched-skeleton
+	url = https://github.com/miguelxvr/sstf-iosched-skeleton.git
