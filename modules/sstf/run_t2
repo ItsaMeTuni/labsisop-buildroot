@@ -1,6 +1,6 @@
 #!/bin/bash
-echo noop > /sys/block/sda/queue/scheduler
-sector_read
+# echo noop > /sys/block/sda/queue/scheduler
+# sector_read
 modprobe sstf-iosched
 echo sstf > /sys/block/sda/queue/scheduler
 sector_read

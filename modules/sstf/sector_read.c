@@ -12,7 +12,7 @@
 
 #define BUFFER_LENGTH 512
 #define DISK_SZ 1073741824
-#define FORKS 16
+#define FORKS 120
 
 int main()
 {
@@ -40,6 +40,7 @@ int main()
 	printf("Forking processes to put stress on disk scheduler...\n");
 	for (int i = 0; i < FORKS; i++) {
 		is_parent = fork();
+		// fork();
 		if (!is_parent) {
 			break;
 		};
@@ -53,7 +54,7 @@ int main()
 		return errno;
 	}
 
-	for (i = 0; i < 5000; i++) {
+	for (i = 0; i < 500; i++) {
 		pos = (rand() % (DISK_SZ >> 9));
 		/* Set position */
 		lseek(fd, pos * 512, SEEK_SET);
