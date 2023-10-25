@@ -8,6 +8,8 @@ all:
 	$(MAKE) -C $(KDIR) M=$$PWD modules_install INSTALL_MOD_PATH=../../target
 	$(COMPILER) -o sector_read sector_read.c
 	cp sector_read $(BUILDROOT_DIR)/output/target/bin
+	chmod +x run_t2
+	cp run_t2 $(BUILDROOT_DIR)/output/target/bin
 	
 	
 	
